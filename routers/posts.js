@@ -68,7 +68,7 @@ router.patch('/update/:postID', async (req, rsp) => {
 })
 
 // delete specific post by id
-router.patch('/update/:postID', async (req, rsp) => {
+router.delete('/delete/:postID', async (req, rsp) => {
   try {
     const deletedPost = await Post.remove({ _id: req.params.postID })
     rsp.json(deletedPost)
